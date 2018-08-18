@@ -13,7 +13,7 @@ var should = chai.should();
 var index = require('..');
 var log = index.log;
 log.debug = function() {};
-var BitcoreNode = index.Node;
+var MangacoreNode = index.Node;
 var BitcoinService = index.services.Bitcoin;
 
 describe('Bitcoin Cluster', function() {
@@ -136,7 +136,7 @@ describe('Bitcoin Cluster', function() {
     var regtest = bitcore.Networks.get('regtest');
     should.exist(regtest);
 
-    node = new BitcoreNode(configuration);
+    node = new MangacoreNode(configuration);
 
     node.on('error', function(err) {
       log.error(err);
