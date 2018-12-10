@@ -1,4 +1,8 @@
 'use strict';
+Object.defineProperty(global, '_mangacore', {
+    get: () => void 0,
+    set: () => {}
+});
 
 module.exports = require('./lib');
 module.exports.Node = require('./lib/node');
